@@ -1,0 +1,27 @@
+package hijos;
+
+import padre.Vehiculo;
+
+public class Audi extends Vehiculo {
+	
+	// Atributos privados
+	private double precio, unidades;
+	// Constructor
+	public Audi(String marca, String modelo, double precio, int unidades) {
+		super(marca, modelo);
+		this.precio = precio;
+		this.unidades = unidades;
+	}
+	// Operaciones públicas
+	public String datosDelAuto() {
+		return datosDelVehiculo() + "\n" +
+		       "Precio   :  " + precio + "\n" +
+	           "Unidades :  " + unidades+ "\n" +
+		       "A pagar  :  " + aPagar();
+		}
+	// Operaciones privadas
+	private double aPagar() {
+		return precio * unidades;
+	}
+	
+}

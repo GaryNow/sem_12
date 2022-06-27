@@ -1,0 +1,25 @@
+package padre;
+
+public class Vehiculo {
+	
+	// Atributos protegidos
+	protected int numeroChasis, numeroMotor;
+	String placa;
+	// Constructor
+	public Vehiculo(int numeroChasis, int numeroMotor, String placa) {
+		this.numeroChasis = numeroChasis;
+		this.numeroMotor = numeroMotor;
+		this.placa = placa;
+	}
+	// Operaciones públicas
+	public String datosDelVehiculo() {
+		return "Número del chasis   :  " + numeroChasis + "\n" +
+		       "Número del motor    :  " + numeroMotor + "\n" +
+		       "Placa               :  " + placa + "\n" +
+		       "Código de seguridad :  " + codigoDeSeguridad();
+	}
+	// Operaciones privadas	
+	private int codigoDeSeguridad() {
+		return numeroChasis + numeroMotor;
+	}
+}

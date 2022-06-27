@@ -1,0 +1,26 @@
+package hijos;
+
+import padre.Vehiculo;
+
+public class Auto extends Vehiculo {
+	
+	// Atributos privados
+	private double precio, impuesto;
+	// Constructor
+	public Auto(String marca, String modelo, double precio, double impuesto) {
+		super(marca, modelo);
+		this.precio = precio;
+		this.impuesto = impuesto;
+	}
+	// Operaciones públicas
+	public String datosDelAuto() {
+		return datosDelVehiculo() + "\n" +
+		       "Precio   :  " + precio + "\n" +
+		       "Apagar  :  " + aPagar();
+		}
+	// Operaciones privadas
+	private double aPagar() {
+		return precio + impuesto;
+	}
+	
+}

@@ -1,0 +1,24 @@
+package padre;
+
+public class Vehiculo {
+	
+	// Atributos protegidos
+	protected int numeroChasis, numeroMotor, numeroPlaca;
+	// Constructor
+	public Vehiculo(int numeroChasis, int numeroMotor, int numeroPlaca) {
+		this.numeroChasis = numeroChasis;
+		this.numeroMotor = numeroMotor;
+		this.numeroPlaca = numeroPlaca;
+	}
+	// Operaciones públicas
+	public String datosDelVehiculo() {
+		return "Número del chasis :  " + numeroChasis + "\n" +
+		       "Número del motor  :  " + numeroMotor + "\n" +
+		       "Número de placa   :  " + numeroPlaca + "\n" +
+		       "Correo   :  " + generarCorreo();
+	}
+	// Operaciones privadas	
+	private String generarCorreo() {
+		return nombre + "." + apellido + "@cibertec.edu.pe";
+	}
+}
